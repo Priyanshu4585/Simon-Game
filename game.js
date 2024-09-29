@@ -21,8 +21,7 @@ $(".btn").click(function() {
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
-  animatePress(userChosenColour);
-
+  
   checkAnswer(userClickedPattern.length-1);
 });
 
@@ -41,7 +40,7 @@ function checkAnswer(currentLevel) {
 
       setTimeout(function () {
         $("body").removeClass("game-over");
-      }, 200);
+      }, 1000);
 
       startOver();
     }
@@ -58,13 +57,6 @@ function nextSequence() {
 
   $("." + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
   playSound(randomChosenColour);
-}
-
-function animatePress(currentColor) {
-  $("." + currentColor).addClass("pressed");
-  setTimeout(function () {
-    $("." + currentColor).removeClass("pressed");
-  }, 100);
 }
 
 function playSound(name) {
