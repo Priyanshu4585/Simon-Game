@@ -1,53 +1,95 @@
-body {
-  text-align: center;
-  background-color: #011F3F;
-}
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: radial-gradient(circle at center, #000000, #333333);
+    color: white;
+  }
 
-#level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
-}
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    margin:  50px;
+    color: #FEF2BF;
+  }
+  
+  .simon-game-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 350px;
+    background-color: #222;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .simon-button {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  }
+  
+  .simon-button.green {
+    background-color: #00FF00;
+  }
+  
+  .simon-button.red {
+    background-color: #FF0000;
+  }
+  
+  .simon-button.yellow {
+    background-color: #FFFF00;
+  }
+  
+  .simon-button.blue {
+    background-color: #0000FF;
+  }
+  
+  .simon-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
 
-.container {
-  display: block;
-  width: 50%;
-  margin: auto;
+  .simon-game-container::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  .simon-game-container::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #666;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) inset;
+    z-index: -1;
+  }
 
-}
-
-.btn {
-  margin: 25px;
-  display: inline-block;
-  height: 200px;
-  width: 200px;
-  border: 10px solid black;
-  border-radius: 20%;
-}
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
-}
+  .game-over{
+    background: radial-gradient(circle at center, #ff0000, #470000);
+    opacity: 0.8;
+  }
