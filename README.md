@@ -1,0 +1,1 @@
+Simon Game is a simple yet challenging memory game where players are tasked with repeating a random sequence of lights and sounds. Each round adds a new step to the sequence, making the game progressively harder. It's a fun way to test and improve your memory skills while enjoying an engaging and interactive experience!
