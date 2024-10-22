@@ -93,3 +93,13 @@
     background: radial-gradient(circle at center, #ff0000, #470000);
     opacity: 0.8;
   }
+@media (max-width: 480px) {
+    #level-title {
+        font-size: 1.8rem;
+    }
+
+    .simon-button {
+        width: 40%; 
+        height: 40%;
+    }
+}
