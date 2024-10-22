@@ -7,29 +7,23 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keydown(function() {
-  startGame();
-});
-
-$(document).on("touchstart", function() {
+$(document).keypress(function() {
   if (!started) {
-    startGame();
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
   }
 });
 
-function startGame() {
-  $("#level-title").text("Level " + level);
-  nextSequence();
-  started = true;
-}
-$(".btn").on("click touchstart", function() {
+$(".btn").click(function() {
+
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
-  checkAnswer(userClickedPattern.length - 1);
+  
+  checkAnswer(userClickedPattern.length-1);
 });
-
 
 function checkAnswer(currentLevel) {
 
