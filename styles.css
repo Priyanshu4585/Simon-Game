@@ -93,6 +93,31 @@
     background: radial-gradient(circle at center, #ff0000, #470000);
     opacity: 0.8;
   }
+  #start-button {
+    width: 200px;
+    height: 60px; 
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    font-size: 1.5rem;
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+    margin: 20px; 
+    margin-top: 60px;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}
+
+
+#start-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
+}
+
 @media (max-width: 480px) {
     #level-title {
         font-size: 1.8rem;
