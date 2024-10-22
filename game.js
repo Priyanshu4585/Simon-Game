@@ -15,15 +15,14 @@ $(document).keydown(function() {
   }
 });
 
-$(".btn").click(function() {
-
+$(".btn").on("click touchstart", function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
-  
-  checkAnswer(userClickedPattern.length-1);
+  checkAnswer(userClickedPattern.length - 1);
 });
+
 
 function checkAnswer(currentLevel) {
 
