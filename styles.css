@@ -106,22 +106,14 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
     margin: 20px; 
     margin-top: 60px;
- }
- #start-button:hover {
+}
+
+#start-button:hover {
     background-color: #45a049;
- }
- #start-button:active {
+}
+
+
+#start-button:active {
     transform: scale(0.95);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); 
- }
-
-@media (max-width: 480px) {
-    #level-title {
-        font-size: 1.8rem;
-    }
-
-    .simon-button {
-        width: 40%; 
-        height: 40%;
-    }
 }
