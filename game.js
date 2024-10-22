@@ -8,13 +8,20 @@ var started = false;
 var level = 0;
 
 $(document).keydown(function() {
+  startGame();
+});
+
+$(document).on("touchstart", function() {
   if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
+    startGame();
   }
 });
 
+function startGame() {
+  $("#level-title").text("Level " + level);
+  nextSequence();
+  started = true;
+}
 $(".btn").on("click touchstart", function() {
   var userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
