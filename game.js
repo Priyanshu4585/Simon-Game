@@ -7,13 +7,15 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+const button = document.getElementById("start-button");
+
+button.onclick=function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
-});
+};
 
 $(".btn").click(function() {
 
